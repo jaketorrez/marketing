@@ -4,4 +4,5 @@
 - Posting items for customers to buy
 - Staying up-to-date on the market value of products like theirs
 - Networking and collaborating with other local business owners in their area
+
     This repo is the home of the marketing portion of the app. It includes responsive home and about pages.
