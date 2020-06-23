@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300")
 /***********************************************************************
-*  Reset
+*  Reset *
 ***********************************************************************/
 * {
   box-sizing: border-box;
@@ -22,15 +22,14 @@ a {
   text-decoration: none;
 }
 
-/**************************************************************
-* Mobile Styles: screen-size < 400px
-**************************************************************/
+/* The application styles have been developed mobile-first */
 
+/* Standard styles */
 html {
     font-size: 62.5%; /* Responsive 10px */
 }
 body {
-    line-height: 2;
+    line-height: 1.5;
     font-family: 'Lora', serif;
     font-size: 1.6rem; /* Responsive 16px */
     background-color: #fce1e0;
@@ -41,6 +40,13 @@ h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
 }
+h1 { text-transform: uppercase; }
+h2, h3 { text-transform: capitalize; }
+
+/**************************************************************
+* Mobile Styles: screen-size < 400px *
+**************************************************************/
+
 /* Header styles */
 header {
     display: flex;
@@ -53,9 +59,10 @@ nav {
     display: flex;
     flex-direction: column;
     align-content: center;
+    order: 1;
     margin-left: 1%;
     padding: 3%;
-    width: 25%;
+    width: 22.5%;
 }
 nav a {
     margin: 2%;
@@ -66,48 +73,96 @@ nav a {
     color: plum;
 }
 header h1 {
+    order: 2;
     margin: auto;
     width: 70%;
     text-transform: uppercase;
 }
 hr {
-    width: 90%;
+    width: 87.5%;
+}
+
+/* Main section styles */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+}
+
+/* Footer styles */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4% auto;
+    width: 85%;
+}
+footer a {
+    padding: 3%;
+    border-radius: 50%;
+    width: 15%;
+    text-transform: uppercase;
+    font-size: 2rem;
+    background-color: plum;
+    color: navajowhite;
 }
 
 /****************************************************
-* Mobile Styles: screen-size > 400 and < 760px
+* Mobile Styles: screen-size between 400px and 700px *
 ****************************************************/
 
 @media (min-width: 400px) {
-    nav {
+    nav, footer {
         background-color: #dcdcdc;
+    }
+    nav a {
         color: darkslateblue;
+    }
+    footer a {
+        background-color: darkslateblue;
     }
 }
 
 /****************************************************
-* Tablet Styles: tablets and smaller laptop screens
+* Tablet Styles: tablets and smaller laptop screens *
 ****************************************************/
 
-@media (min-width: 760px) {
+@media (min-width: 700px) {
+    header h1 { order: initial; }
+    nav, footer {
+        background-color: mistyrose;
+    }
     nav {
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
+        order: initial;
         width: 60%;
     }
     nav a {
-        margin: 2%;
-        padding: 2% 4%;
-        border-radius: 5px;
         max-width: 30%;
     }
+    main {
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    section.info { width: 50%; }
+    section.africa { width: 40%; }
 }
 
 /*******************************************************
-* Desktop styles: screen-size > 1000px
+* Desktop styles: screen-size > 1000px *
 *******************************************************/
 
-@media (max-width: 1000px) {
-    
+@media (min-width: 1000px) {
+    nav, footer {
+        background-color: palevioletred;
+    }
+    nav a {
+        color: rebeccapurple
+    }
+    footer a {
+        background-color: rebeccapurple;
+    }
 }
