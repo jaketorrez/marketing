@@ -40,8 +40,9 @@ h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
 }
-h1 { text-transform: uppercase; }
 h2, h3 { text-transform: capitalize; }
+h1 { text-transform: uppercase; }
+hr {width: 87.5%; }
 
 /**************************************************************
 * Mobile Styles: screen-size < 400px *
@@ -50,8 +51,9 @@ h2, h3 { text-transform: capitalize; }
 /* Header styles */
 header {
     display: flex;
+    justify-content: space-between;
     align-items: flex-start;
-    margin: 1% auto;
+    margin: 2% auto;
     padding: 2%;
     width: 85%;
 }
@@ -60,7 +62,6 @@ nav {
     flex-direction: column;
     align-content: center;
     order: 1;
-    margin-left: 1%;
     padding: 3%;
     width: 22.5%;
 }
@@ -76,10 +77,6 @@ header h1 {
     order: 2;
     margin: auto;
     width: 70%;
-    text-transform: uppercase;
-}
-hr {
-    width: 87.5%;
 }
 
 /* Main section styles */
@@ -87,8 +84,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 85%;
 }
+main, aside { width: 85%; }
 
 /* Footer styles */
 footer {
@@ -113,15 +110,9 @@ footer a {
 ****************************************************/
 
 @media (min-width: 400px) {
-    nav, footer {
-        background-color: #dcdcdc;
-    }
-    nav a {
-        color: darkslateblue;
-    }
-    footer a {
-        background-color: darkslateblue;
-    }
+    nav, footer { background-color: #dcdcdc; }
+    nav a { color: darkslateblue; }
+    footer a { background-color: darkslateblue; }
 }
 
 /****************************************************
@@ -130,9 +121,7 @@ footer a {
 
 @media (min-width: 700px) {
     header h1 { order: initial; }
-    nav, footer {
-        background-color: mistyrose;
-    }
+    nav, footer { background-color: mistyrose; }
     nav {
         flex-direction: row;
         justify-content: space-evenly;
@@ -140,15 +129,12 @@ footer a {
         order: initial;
         width: 60%;
     }
-    nav a {
-        max-width: 30%;
-    }
+    nav a { max-width: 30%; }
     main {
-        flex-flow: row;
-        justify-content: space-between;
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 85%;
     }
-    section.info { width: 50%; }
-    section.africa { width: 40%; }
 }
 
 /*******************************************************
@@ -156,13 +142,9 @@ footer a {
 *******************************************************/
 
 @media (min-width: 1000px) {
-    nav, footer {
-        background-color: palevioletred;
-    }
-    nav a {
-        color: rebeccapurple
-    }
-    footer a {
-        background-color: rebeccapurple;
-    }
+    nav, footer { background-color: palevioletred; }
+    nav a { color: rebeccapurple; }
+    main { width: 55%; }
+    aside { width: 40%; }
+    footer a { background-color: rebeccapurple; }
 }
