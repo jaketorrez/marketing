@@ -12,15 +12,8 @@
   font: inherit;
   vertical-align: baseline;
 }
-footer, header, nav, section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-a {
-  text-decoration: none;
-}
+footer, header, nav, section { display: block; }
+body { line-height: 1; }
 
 /* The application styles have been developed mobile-first */
 
@@ -42,7 +35,6 @@ h1, h2, h3 {
 h2, h3 { text-transform: capitalize; }
 h1 { text-transform: uppercase; }
 hr {width: 97%; }
-a.button { font-size: 22rem; }
 p {
     line-height: 2.4;
     text-align: justify;
@@ -71,8 +63,7 @@ nav {
 }
 nav a {
     margin: 2%;
-    padding: 2% 4%;
-    border-radius: 6px;
+    padding: 2%;
     text-align: center;
     color: plum;
 }
@@ -84,7 +75,6 @@ nav a {
     order: 3;
     width: 15%;
 }
-.login a { padding: 5% 2%; }
 
 /* Main section styles */
 main {
@@ -100,47 +90,49 @@ footer {
     justify-content: center;
     align-items: center;
     margin: 4% auto;
-    width: 85%;
+    width: 95%;
 }
-footer a {
-    padding: 3%;
-    border-radius: 50%;
+.button {
+    padding: 5% 2%;
+    border-radius: 6px;
     width: 15%;
     text-transform: uppercase;
+    text-decoration: none;
     font-size: 2rem;
     background-color: plum;
     color: navajowhite;
 }
-
-/****************************************************
-* Mobile Styles: screen-size between 400px and 700px *
-****************************************************/
-
-@media (min-width: 400px) {
-    nav, footer { background-color: #dcdcdc; }
-    nav a { color: darkslateblue; }
-    footer a { background-color: darkslateblue; }
+.poverty {
+    border: 1px solid #010203;
+    background-color: #dcdcdc;
+    color: #010203;
 }
 
 /****************************************************
-* Tablet Styles: tablets and smaller laptop screens *
+* Mobile Styles: screen-size between 500px and 800px *
 ****************************************************/
 
-@media (min-width: 700px) {
-    header h1 { order: initial; }
-    nav, footer { background-color: mistyrose; }
+@media (min-width: 500px) {
+    nav a { color: darkslateblue; }
+    a.button { background-color: darkslateblue; }
+}
+
+/****************************************************
+* Tablet Styles: tablets and smaller laptop screens between 800px and 1000px *
+****************************************************/
+
+@media (min-width: 800px) {
+    .title, .login, nav { order: initial; }
+    header, footer { background-color: mistyrose; }
     nav {
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
-        order: initial;
         width: 60%;
     }
-    nav a { max-width: 30%; }
     main {
         flex-flow: row wrap;
-        justify-content: center;
-        width: 85%;
+        justify-content: space-around;
     }
 }
 
@@ -153,5 +145,5 @@ footer a {
     nav a { color: rebeccapurple; }
     main { width: 55%; }
     aside { width: 40%; }
-    footer a { background-color: rebeccapurple; }
+    a.button { background-color: rebeccapurple; }
 }
