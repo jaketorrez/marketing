@@ -39,6 +39,19 @@ p {
     line-height: 2.4;
     text-align: justify;
 }
+.button {
+    padding: 4% 2%;
+    border-radius: 6px;
+    width: 15%;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2rem;
+}
+.poverty {
+    border: 1px solid #010203;
+    background-color: #dcdcdc;
+    color: #010203;
+}
 
 /**************************************************************
 * Mobile Styles: screen-size < 400px *
@@ -92,21 +105,6 @@ footer {
     margin: 4% auto;
     width: 95%;
 }
-.button {
-    padding: 5% 2%;
-    border-radius: 6px;
-    width: 15%;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 2rem;
-    background-color: plum;
-    color: navajowhite;
-}
-.poverty {
-    border: 1px solid #010203;
-    background-color: #dcdcdc;
-    color: #010203;
-}
 
 /****************************************************
 * Mobile Styles: screen-size between 500px and 800px *
@@ -134,6 +132,8 @@ footer {
         flex-flow: row wrap;
         justify-content: space-around;
     }
+    .welcome { width: 90%; }
+    .action-call, .poverty { width: 45%; }
 }
 
 /*******************************************************
@@ -143,7 +143,7 @@ footer {
 @media (min-width: 1000px) {
     nav, footer { background-color: palevioletred; }
     nav a { color: rebeccapurple; }
-    main { width: 55%; }
-    aside { width: 40%; }
-    a.button { background-color: rebeccapurple; }
+    .button { background-color: rebeccapurple; }
+    main 
+    section { width: 30%; }
 }
