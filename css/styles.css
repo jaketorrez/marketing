@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300")
 /***********************************************************************
-*  Reset
+*  Reset *
 ***********************************************************************/
 * {
   box-sizing: border-box;
@@ -22,20 +22,129 @@ a {
   text-decoration: none;
 }
 
-/**************************************************************
-* Main Styles
-**************************************************************/
+/* The application styles have been developed mobile-first */
+
+/* Standard styles */
 html {
     font-size: 62.5%; /* Responsive 10px */
 }
 body {
-    line-height: 2;
+    line-height: 1.5;
     font-family: 'Lora', serif;
     font-size: 1.6rem; /* Responsive 16px */
+    background-color: #fce1e0;
+    color: #000;
 }
 h1, h2, h3 {
-    line-height: 1.3;
+    line-height: 1.2;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
+}
+h2, h3 { text-transform: capitalize; }
+h1 { text-transform: uppercase; }
+hr {width: 87.5%; }
+
+/**************************************************************
+* Mobile Styles: screen-size < 400px *
+**************************************************************/
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 2% auto;
+    padding: 2%;
+    width: 85%;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    order: 1;
+    padding: 3%;
+    width: 22.5%;
+}
+nav a {
+    margin: 2%;
+    padding: 2% 4%;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2rem;
+    color: plum;
+}
+header h1 {
+    order: 2;
+    margin: auto;
+    width: 70%;
+}
+
+/* Main section styles */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main, aside { width: 85%; }
+
+/* Footer styles */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4% auto;
+    width: 85%;
+}
+footer a {
+    padding: 3%;
+    border-radius: 50%;
+    width: 15%;
     text-transform: uppercase;
+    font-size: 2rem;
+    background-color: plum;
+    color: navajowhite;
+}
+
+/****************************************************
+* Mobile Styles: screen-size between 400px and 700px *
+****************************************************/
+
+@media (min-width: 400px) {
+    nav, footer { background-color: #dcdcdc; }
+    nav a { color: darkslateblue; }
+    footer a { background-color: darkslateblue; }
+}
+
+/****************************************************
+* Tablet Styles: tablets and smaller laptop screens *
+****************************************************/
+
+@media (min-width: 700px) {
+    header h1 { order: initial; }
+    nav, footer { background-color: mistyrose; }
+    nav {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        order: initial;
+        width: 60%;
+    }
+    nav a { max-width: 30%; }
+    main {
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 85%;
+    }
+}
+
+/*******************************************************
+* Desktop styles: screen-size > 1000px *
+*******************************************************/
+
+@media (min-width: 1000px) {
+    nav, footer { background-color: palevioletred; }
+    nav a { color: rebeccapurple; }
+    main { width: 55%; }
+    aside { width: 40%; }
+    footer a { background-color: rebeccapurple; }
 }
