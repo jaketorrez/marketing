@@ -86,6 +86,7 @@ p {
 /* Header styles */
 header {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
     margin: 2% auto;
@@ -97,7 +98,7 @@ nav {
     flex-direction: column;
     align-content: center;
     padding: 3%;
-    width: 30%;
+    width: 25%;
 }
 nav a {
     margin: 2%;
@@ -115,13 +116,14 @@ nav a:active {
 }
 .login {
     order: 3;
-    width: 15%;
+    width: 20%;
 }
 .login a {
     background-color: #010203;
     color: navajowhite;
 }
-header img {
+.header-image {
+    margin: 2% auto;
     max-width: 75%;
 }
 
@@ -147,11 +149,11 @@ footer {
 ****************************************************/
 
 @media (min-width: 800px) {
-    .title, .login, nav {
+    header div, nav, img {
         order: initial;
     }
-    header, footer {
-        background-color: mistyrose;
+    .header-image {
+        max-width: 35%;
     }
     nav {
         flex-direction: row;
@@ -163,8 +165,12 @@ footer {
         flex-flow: row wrap;
         justify-content: space-around;
     }
-    .welcome { width: 90%; }
-    .action-call, .poverty { width: 45%; }
+    .welcome {
+        width: 90%;
+    }
+    .action-call, .poverty {
+        width: 45%;
+    }
 }
 
 /*******************************************************
