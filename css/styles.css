@@ -25,19 +25,51 @@ body {
     font-family: 'Lora', serif;
     font-size: 1.6rem; /* Responsive 16px */
     background-color: #fce1e0;
-    color: black;
+    color: #010203;
 }
 h1, h2, h3 {
     line-height: 1.2;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
 }
-h2, h3 { text-transform: capitalize; }
-h1 { text-transform: uppercase; }
-hr {width: 97%; }
+h2, h3 {
+    text-transform: capitalize;
+}
+header, footer {
+    width: 95%;
+}
+a:hover, a:focus {
+    outline: none;
+    border: thin solid palevioletred;
+}
+h1 {
+    text-transform: uppercase;
+}
+hr {
+    width: 97%;
+    color: currentColor;
+}
 p {
     line-height: 2.4;
     text-align: justify;
+}
+img {
+    max-width: 50%;
+    max-height: 30%;
+}
+.button {
+    padding: 4% 2%;
+    border-radius: 6px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 800;
+    background-color: palevioletred;
+    color: currentColor;
+}
+.team-photo {
+    max-width: 100%;
+    max-height: 50%;
 }
 
 /**************************************************************
@@ -47,74 +79,70 @@ p {
 /* Header styles */
 header {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
     margin: 2% auto;
     padding: 2%;
-    width: 95%;
 }
 nav {
     order: 1;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
     padding: 3%;
-    width: 30%;
+    width: 25%;
 }
 nav a {
     margin: 2%;
     padding: 2%;
     text-align: center;
-    color: plum;
+    background-color: palevioletred;
+}
+nav a:active {
+    background-color: #010203;
+    color: navajowhite;
 }
 .title {
     order: 2;
-    width: 45%;
+    width: 65%;
 }
-.login {
-    order: 3;
-    width: 15%;
+.title a {
+    background-color: #010203;
+    color: navajowhite;
+}
+.header-image {
+    justify-self: center;
+    align-self: flex-end;
 }
 
 /* Main section styles */
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 90%;
+    align-items: center;
+    width: 95%;
+}
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.poverty, .mission-statement {
+    background-color: palevioletred;
 }
 
 /* Footer styles */
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    dsplay: flex;
+    flex-direction: row;
     margin: 4% auto;
     width: 95%;
 }
-.button {
-    padding: 5% 2%;
-    border-radius: 6px;
-    width: 15%;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 2rem;
-    background-color: plum;
-    color: navajowhite;
-}
-.poverty {
-    border: 1px solid #010203;
-    background-color: #dcdcdc;
-    color: #010203;
-}
-
-/****************************************************
-* Mobile Styles: screen-size between 500px and 800px *
-****************************************************/
-
-@media (min-width: 500px) {
-    nav a { color: darkslateblue; }
-    a.button { background-color: darkslateblue; }
+footer a {
+    justify-self: flex-start;
+    align-self: center;
 }
 
 /****************************************************
@@ -122,17 +150,30 @@ footer {
 ****************************************************/
 
 @media (min-width: 800px) {
-    .title, .login, nav { order: initial; }
-    header, footer { background-color: mistyrose; }
+    /* Header styles */
+    header div, nav, img {
+        order: initial;
+    }
+    .header-image {
+        max-width: 35%;
+        justify-self: flex-start;
+    }
     nav {
         flex-direction: row;
         justify-content: space-around;
-        align-items: center;
         width: 60%;
     }
+
+    /* Main styles */
     main {
         flex-flow: row wrap;
         justify-content: space-around;
+    }
+    .action-call, .poverty {
+        width: 45%;
+    }
+    .team div {
+        max-width: 50%;
     }
 }
 
@@ -141,9 +182,5 @@ footer {
 *******************************************************/
 
 @media (min-width: 1000px) {
-    nav, footer { background-color: palevioletred; }
-    nav a { color: rebeccapurple; }
-    main { width: 55%; }
-    aside { width: 40%; }
-    a.button { background-color: rebeccapurple; }
+    
 }
