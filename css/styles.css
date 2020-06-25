@@ -25,16 +25,30 @@ body {
     font-family: 'Lora', serif;
     font-size: 1.6rem; /* Responsive 16px */
     background-color: #fce1e0;
-    color: black;
+    color: #010203;
 }
 h1, h2, h3 {
     line-height: 1.2;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
 }
-h2, h3 { text-transform: capitalize; }
-h1 { text-transform: uppercase; }
-hr {width: 97%; }
+h2, h3 {
+    text-transform: capitalize;
+}
+header, footer {
+    width: 95%;
+}
+a:hover, a:focus {
+    outline: none;
+    border: thin solid palevioletred;
+}
+h1 {
+    text-transform: uppercase;
+}
+hr {
+    width: 97%;
+    color: currentColor;
+}
 p {
     line-height: 2.4;
     text-align: justify;
@@ -42,15 +56,27 @@ p {
 .button {
     padding: 4% 2%;
     border-radius: 6px;
-    width: 15%;
     text-transform: uppercase;
     text-decoration: none;
     font-size: 2rem;
+    font-weight: 800;
+    background-color: palevioletred;
+    color: currentColor;
 }
 .poverty {
-    border: 1px solid #010203;
-    background-color: #dcdcdc;
-    color: #010203;
+    background-color: palevioletred;
+}
+.team {
+    display: flex;
+    justify-content: space-evenly;
+}
+.team div {
+    max-width: 25%;
+}
+.mission-statement {
+    display: flex;
+    flex-direction: column;
+    background-color: palevioletred;
 }
 
 /**************************************************************
@@ -64,7 +90,6 @@ header {
     align-items: flex-start;
     margin: 2% auto;
     padding: 2%;
-    width: 95%;
 }
 nav {
     order: 1;
@@ -78,7 +103,11 @@ nav a {
     margin: 2%;
     padding: 2%;
     text-align: center;
-    color: plum;
+    background-color: palevioletred;
+}
+nav a:active {
+    background-color: #010203;
+    color: navajowhite;
 }
 .title {
     order: 2;
@@ -88,13 +117,20 @@ nav a {
     order: 3;
     width: 15%;
 }
+.login a {
+    background-color: #010203;
+    color: navajowhite;
+}
+header img {
+    max-width: 75%;
+}
 
 /* Main section styles */
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90%;
+    width: 95%;
 }
 
 /* Footer styles */
@@ -107,21 +143,16 @@ footer {
 }
 
 /****************************************************
-* Mobile Styles: screen-size between 500px and 800px *
-****************************************************/
-
-@media (min-width: 500px) {
-    nav a { color: darkslateblue; }
-    a.button { background-color: darkslateblue; }
-}
-
-/****************************************************
 * Tablet Styles: tablets and smaller laptop screens between 800px and 1000px *
 ****************************************************/
 
 @media (min-width: 800px) {
-    .title, .login, nav { order: initial; }
-    header, footer { background-color: mistyrose; }
+    .title, .login, nav {
+        order: initial;
+    }
+    header, footer {
+        background-color: mistyrose;
+    }
     nav {
         flex-direction: row;
         justify-content: space-around;
@@ -144,6 +175,5 @@ footer {
     nav, footer { background-color: palevioletred; }
     nav a { color: rebeccapurple; }
     .button { background-color: rebeccapurple; }
-    main 
-    section { width: 30%; }
+    main section { width: 30%; }
 }
