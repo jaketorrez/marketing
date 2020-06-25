@@ -63,21 +63,6 @@ p {
     background-color: palevioletred;
     color: currentColor;
 }
-.poverty {
-    background-color: palevioletred;
-}
-.team {
-    display: flex;
-    justify-content: space-evenly;
-}
-.team div {
-    max-width: 25%;
-}
-.mission-statement {
-    display: flex;
-    flex-direction: column;
-    background-color: palevioletred;
-}
 
 /**************************************************************
 * Mobile Styles: screen-size < 400px *
@@ -134,14 +119,32 @@ main {
     justify-content: center;
     width: 95%;
 }
+.poverty {
+    background-color: palevioletred;
+}
+.team {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.team img {
+    max-height: 50%;
+}
+.mission-statement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: palevioletred;
+}
 
 /* Footer styles */
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 4% auto;
     width: 95%;
+}
+footer a {
+    margin-right: 5%;
+    margin-left: auto;
 }
 
 /****************************************************
@@ -171,6 +174,9 @@ footer {
     .action-call, .poverty {
         width: 45%;
     }
+    .team div {
+        max-width: 50%;
+    }
 }
 
 /*******************************************************
@@ -178,8 +184,5 @@ footer {
 *******************************************************/
 
 @media (min-width: 1000px) {
-    nav, footer { background-color: palevioletred; }
-    nav a { color: rebeccapurple; }
-    .button { background-color: rebeccapurple; }
-    main section { width: 30%; }
+    
 }
