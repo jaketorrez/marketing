@@ -53,6 +53,10 @@ p {
     line-height: 2.4;
     text-align: justify;
 }
+img {
+    max-width: 50%;
+    max-height: 30%;
+}
 .button {
     padding: 4% 2%;
     border-radius: 6px;
@@ -62,6 +66,10 @@ p {
     font-weight: 800;
     background-color: palevioletred;
     color: currentColor;
+}
+.team-photo {
+    max-width: 100%;
+    max-height: 50%;
 }
 
 /**************************************************************
@@ -81,7 +89,7 @@ nav {
     order: 1;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
     padding: 3%;
     width: 25%;
 }
@@ -97,54 +105,44 @@ nav a:active {
 }
 .title {
     order: 2;
-    width: 45%;
+    width: 65%;
 }
-.login {
-    order: 3;
-    width: 20%;
-}
-.login a {
+.title a {
     background-color: #010203;
     color: navajowhite;
 }
 .header-image {
-    margin: 2% auto;
-    max-width: 75%;
+    justify-self: center;
+    align-self: flex-end;
 }
 
 /* Main section styles */
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     width: 95%;
 }
-.poverty {
-    background-color: palevioletred;
-}
-.team {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.team img {
-    max-height: 50%;
-}
-.mission-statement {
+main section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+}
+.poverty, .mission-statement {
     background-color: palevioletred;
 }
 
 /* Footer styles */
 footer {
+    dsplay: flex;
+    flex-direction: row;
     margin: 4% auto;
     width: 95%;
 }
 footer a {
-    margin-right: 5%;
-    margin-left: auto;
+    justify-self: flex-start;
+    align-self: center;
 }
 
 /****************************************************
@@ -152,24 +150,24 @@ footer a {
 ****************************************************/
 
 @media (min-width: 800px) {
+    /* Header styles */
     header div, nav, img {
         order: initial;
     }
     .header-image {
         max-width: 35%;
+        justify-self: flex-start;
     }
     nav {
         flex-direction: row;
         justify-content: space-around;
-        align-items: center;
         width: 60%;
     }
+
+    /* Main styles */
     main {
         flex-flow: row wrap;
         justify-content: space-around;
-    }
-    .welcome {
-        width: 90%;
     }
     .action-call, .poverty {
         width: 45%;
