@@ -42,6 +42,9 @@ a:hover, a:focus {
     outline: none;
     border: thin solid palevioletred;
 }
+a:visited {
+    color: DarkViolet;
+}
 h1 {
     text-transform: uppercase;
 }
@@ -62,6 +65,8 @@ img {
     border-radius: 6px;
     text-transform: uppercase;
     text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 2rem;
     font-weight: 800;
     background-color: palevioletred;
@@ -79,19 +84,18 @@ img {
 /* Header styles */
 header {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     margin: 2% auto;
     padding: 2%;
 }
 nav {
-    order: 1;
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     padding: 3%;
-    width: 25%;
+    width: 60%;
 }
 nav a {
     margin: 2%;
@@ -100,34 +104,20 @@ nav a {
     background-color: palevioletred;
 }
 nav a:active {
-    background-color: #010203;
-    color: navajowhite;
-}
-.title {
-    order: 2;
-    width: 65%;
-}
-.title a {
-    background-color: #010203;
-    color: navajowhite;
-}
-.header-image {
-    justify-self: center;
-    align-self: flex-end;
+    background-color: navajowhite;
 }
 
 /* Main section styles */
 main {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 95%;
 }
 main section {
+    align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
 }
 .poverty, .mission-statement {
     background-color: palevioletred;
@@ -151,16 +141,13 @@ footer a {
 
 @media (min-width: 800px) {
     /* Header styles */
-    header div, nav, img {
-        order: initial;
-    }
     .header-image {
         max-width: 35%;
         justify-self: flex-start;
     }
     nav {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
         width: 60%;
     }
 
@@ -182,5 +169,5 @@ footer a {
 *******************************************************/
 
 @media (min-width: 1000px) {
-    
+
 }
