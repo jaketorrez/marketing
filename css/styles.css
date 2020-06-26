@@ -92,10 +92,8 @@ header {
 }
 nav {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    overflow: hidden;
     padding: 3%;
-    width: 60%;
 }
 nav a {
     margin: 2%;
@@ -103,8 +101,11 @@ nav a {
     text-align: center;
     background-color: palevioletred;
 }
-nav a:active {
+nav .is-active {
     background-color: navajowhite;
+}
+#toggle {
+    display: block;
 }
 
 /* Main section styles */
@@ -146,11 +147,9 @@ footer a {
         justify-self: flex-start;
     }
     nav {
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 60%;
+        justify-self: flex-end;
     }
-
+    
     /* Main styles */
     main {
         flex-flow: row wrap;
@@ -169,5 +168,7 @@ footer a {
 *******************************************************/
 
 @media (min-width: 1000px) {
-    
+    .team div {
+        max-width: 25%;
+    }
 }
