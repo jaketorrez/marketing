@@ -85,7 +85,7 @@ img {
 header {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 2% auto;
     padding: 2%;
@@ -169,5 +169,5 @@ footer a {
 *******************************************************/
 
 @media (min-width: 1000px) {
-
+    
 }
